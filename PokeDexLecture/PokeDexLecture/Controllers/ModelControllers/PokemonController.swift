@@ -38,7 +38,7 @@ class PokemonController {
     
     static func fetchSprite(for pokemon: Pokemon, completion: @escaping (Result<UIImage, PokemonError>) -> Void) {
         // Step 1 - URL
-        let url = pokemon.sprite.classic
+        let url = pokemon.sprites.classic
         // Step 2 - Data Task
         URLSession.shared.dataTask(with: url) {data, _, error in
             // Step 3 - Handle Error
